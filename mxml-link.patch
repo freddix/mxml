@@ -1,0 +1,12 @@
+diff -aurN mxml-2.7.orig/Makefile.in mxml-2.7/Makefile.in
+--- mxml-2.7.orig/Makefile.in	2012-11-05 11:15:33.788054801 +0100
++++ mxml-2.7/Makefile.in	2012-11-05 11:20:38.762161077 +0100
+@@ -297,7 +297,7 @@
+ 
+ libmxml.so.1.5:	$(LIBOBJS)
+ 	echo Creating $@...
+-	$(DSO) $(DSOFLAGS) -o libmxml.so.1.5 $(LIBOBJS)
++	$(DSO) $(DSOFLAGS) -o libmxml.so.1.5 $(LIBOBJS) -lpthread
+ 	$(RM) libmxml.so libmxml.so.1
+ 	$(LN) libmxml.so.1.5 libmxml.so
+ 	$(LN) libmxml.so.1.5 libmxml.so.1
